@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import '../../ListItem/notificationsData.dart';
 
@@ -17,28 +18,28 @@ class _notificationState extends State<notification> {
         Post(
             image: "assets/img/Logo.png",
             id: 1,
-            title: "Wedding Dog",
+            title: "title".tr(),
             desc: "Thanks for downloaded treva shop application"),
       );
       items.add(
         Post(
             image: "assets/img/Logo.png",
             id: 2,
-            title: "Wedding Dog",
+            title: "title".tr(),
             desc: "Your Item Delivery"),
       );
       items.add(
         Post(
             image: "assets/img/Logo.png",
             id: 3,
-            title: "Wedding Dog",
+            title: "title".tr(),
             desc: "Pending List Item Shoes"),
       );
       items.add(
         Post(
             image: "assets/img/Logo.png",
             id: 4,
-            title: "Wedding Dog",
+            title: "title".tr(),
             desc: "Get 10% Discount for macbook pro 2018"),
       );
     });

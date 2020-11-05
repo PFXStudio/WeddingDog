@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import 'Login.dart';
 import 'LoginAnimation.dart';
@@ -112,7 +113,7 @@ class _SignupState extends State<Signup> with TickerProviderStateMixin {
                                     Hero(
                                       tag: "Treva",
                                       child: Text(
-                                        "Wedding Dog",
+                                        "title".tr(),
                                         style: TextStyle(
                                             fontWeight: FontWeight.w900,
                                             letterSpacing: 0.6,

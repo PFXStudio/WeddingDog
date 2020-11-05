@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import 'LoginAnimation.dart';
 import 'Signup.dart';
@@ -110,7 +111,7 @@ class _loginScreenState extends State<loginScreen>
                                 Hero(
                                   tag: "Treva",
                                   child: Text(
-                                    "Wedding Dog",
+                                    "title".tr(),
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
                                         letterSpacing: 0.6,

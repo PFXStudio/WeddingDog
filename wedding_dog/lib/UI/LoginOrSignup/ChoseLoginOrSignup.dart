@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../../Library/carousel_pro/carousel_pro.dart';
 
 import '../BottomNavigationBar.dart';
@@ -127,7 +128,7 @@ class _ChoseLoginState extends State<ChoseLogin> with TickerProviderStateMixin {
                                   child: Hero(
                                     tag: "Treva",
                                     child: Text(
-                                      "Wedding Dog",
+                                      "title".tr(),
                                       style: TextStyle(
                                         fontFamily: 'Sans',
                                         fontWeight: FontWeight.w900,

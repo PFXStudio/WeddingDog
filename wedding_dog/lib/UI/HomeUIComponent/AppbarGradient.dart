@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../AcountUIComponent/Message.dart';
 import '../AcountUIComponent/Notification.dart';
 
@@ -82,7 +83,7 @@ class _AppbarGradientState extends State<AppbarGradient> {
                   Padding(
                     padding: EdgeInsets.only(top: 3.0),
                     child: Text(
-                      "Wedding Dog",
+                      "title".tr(),
                       style: TextStyle(
                           fontFamily: "Popins",
                           color: Colors.black12,

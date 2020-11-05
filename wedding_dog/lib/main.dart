@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -7,13 +8,23 @@ import 'UI/OnBoarding.dart';
 
 /// Run first apps open
 void main() {
-  runApp(myApp());
+  runApp(
+    EasyLocalization(
+        useOnlyLangCode: true,
+        supportedLocales: [Locale('en'), Locale('ko')],
+        path: 'assets/translations', // <-- change patch to your
+        fallbackLocale: Locale('en'),
+        child: myApp()),
+  );
 }
 
 /// Set orienttation
 class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(context.supportedLocales); // output: [en_US, ar_DZ, de_DE, ru_RU]
+
+    print(context.fallbackLocale); // output: en_US
     /// To set orientation always portrait
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
@@ -25,7 +36,7 @@ class myApp extends StatelessWidget {
       statusBarColor: Colors.transparent, //or set color with: Color(0xFF0000FF)
     ));
     return new MaterialApp(
-      title: "Wedding Dog",
+      title: "title".tr(),
       theme: ThemeData(
           brightness: Brightness.light,
           backgroundColor: Colors.white,
@@ -33,6 +44,9 @@ class myApp extends StatelessWidget {
           primaryColorBrightness: Brightness.light,
           primaryColor: Colors.white),
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       home: SplashScreen(),
 
       /// Move splash screen to ChoseLogin Layout
@@ -102,7 +116,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
                     /// Text header "Welcome To" (Click to open code)
                     Text(
-                      "Welcome to",
+                      "welcome".tr(),
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w200,
@@ -115,7 +129,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Hero(
                       tag: "Treva",
                       child: Text(
-                        "Wedding Dog",
+                        "title".tr(),
                         style: TextStyle(
                           fontFamily: 'Sans',
                           fontWeight: FontWeight.w900,

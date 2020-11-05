@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class aboutApps extends StatefulWidget {
   @override
@@ -62,7 +63,7 @@ class _aboutAppsState extends State<aboutApps> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            "Wedding Dog",
+                            "title".tr(),
                             style: _txtCustomSub.copyWith(
                                 fontWeight: FontWeight.w600),
                           ),
